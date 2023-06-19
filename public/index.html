@@ -8,21 +8,20 @@
         height: 400px;
       }
     </style>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-Tb4EWGf8oTBcq1dRAyD0+j6AXCaBMZ9wHwtc6sTJjHfqr2WUZikWmGSKA0tDd7QT" crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-OUk1LIWoJWD5hpqkJyxf+F5DBwWlgeKW3xK0UAe3w6B9ZNbeQC6K0TCZSDsbM3e5" crossorigin=""></script>
-    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-Tb4EWGf8oTBcq1dRAyD0+j6AXCaBMZ9wHwtc6sTJjHfqr2WUZikWmGSKA0tDd7QT" crossorigin=""/>
   </head>
   <body>
     <h1>Page de la carte</h1>
     <div id="map"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-OUk1LIWoJWD5hpqkJyxf+F5DBwWlgeKW3xK0UAe3w6B9ZNbeQC6K0TCZSDsbM3e5" crossorigin=""></script>
     <script>
       $(document).ready(() => {
         const id = window.location.pathname.split('/').pop();
 
         // Effectuer une requête Ajax vers le serveur pour récupérer les informations de localisation
-        $.get(`/location/${id}`, (data) => {
+        $.get(`URL_DE_VOTRE_ENDPOINT/${id}`, (data) => {
           const latitude = data.latitude;
           const longitude = data.longitude;
 
