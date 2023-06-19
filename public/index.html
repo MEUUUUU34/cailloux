@@ -21,7 +21,7 @@
         const id = window.location.pathname.split('/').pop();
 
         // Effectuer une requête Ajax vers le serveur pour récupérer les informations de localisation
-        $.get(`URL_DE_VOTRE_ENDPOINT/${id}`, (data) => {
+        $.get(`/location/:id${id}`, (data) => {
           const latitude = data.latitude;
           const longitude = data.longitude;
 
